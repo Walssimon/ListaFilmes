@@ -1,21 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#111"
-    android:layout_height="200dp">
+    android:layout_height="200dp"
+    android:background="#373737"
+    android:orientation="horizontal">
 
     <ImageView
-
+        android:id="@+id/sonicfoto"
         android:layout_width="130dp"
         android:layout_height="180dp"
-        android:src="@drawable/sonico"
+        android:layout_margin="10dp"
         android:scaleType="centerCrop"
-        android:layout_margin="10dp"/>
+        android:src="@drawable/sonico" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/idsonictitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sonic The Hedgehog"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_marginLeft="45dp"/>
+
+        <TextView
+            android:textSize="18sp"
+            android:id="@+id/idsonicdesc"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Um rato azul que corre rapido derrota um homem maluco com bigode, e quer uma familia"
+            android:textColor="#fff" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RatingBar
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5" />
+
+            <TextView
+                android:id="@+id/idscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5,0"
+                android:textSize="25sp"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+            <ImageView
+                android:id="@+id/fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_favorite_border" />
+
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
